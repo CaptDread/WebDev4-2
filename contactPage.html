@@ -32,18 +32,61 @@
                 <p>Wanna get involved, have issues you want dealt with, or do you simply wanna show your appreciation? Well here's your chance! Fill out this exotic form and we'll be sure to get back to you with haste.</p>
             </section>
             <form action="contact_us" class="contact_form">
+                <div class="radio_btns">
+                    <p>what is the reason for your message today?</p>
+                    <label for="radio_btn"  class="ideas">
+                        <input type="radio" name="radio_btn" id="idea_input">
+                        Penny for your thoughts
+                    </label>
+                    <label for="radio_btn" class="issues">
+                        <input type="radio" name="radio_btn" id="issues_input">
+                        I've got an issue or 2
+                    </label>
+                    <label for="radio_btn" class="compliments">
+                        <input type="radio" name="radio_btn" id="compliments_input">
+                        flattery will get you almost anywhere!
+                    </label>
+                </div>
                 <label for="name" class="name">
-                    <input type="text" name="name" id="name" class="name_input">
+                    name
+                    <input type="text" name="name" id="name" class="name_input" autocomplete="on">
                 </label>
                 <label for="email" class="email">
-                    <input type="email" name="email" id="email" class="email_input">
+                    email
+                    <input type="email" name="email" id="email" class="email_input" autocomplete="on">
                 </label>
                 <label for="concerns" class="concerns">
+                    thoughts and concerns
                     <input type="text" name="concerns" id="concerns" class="concerns_input">
+                </label>
+
+                <label for="newsletter" class="newsletter">
+                    <input type="checkbox" name="newsletter" id="nl_checkbox">
+                    Would you like to recieve emails about new plumbus news and offers?
                 </label>
                 <button type="submit" class="submit_btn">submit</button>
             </form>
         </article>
+        
+            <div class="wrapper center-block">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading active" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="plumbus_footer">
@@ -83,6 +126,8 @@
             </nav>
         </div>
     </footer>
+
+    <script src="/dist/js/main.js"></script>
     
 </body>
 </html>

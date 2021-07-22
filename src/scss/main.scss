@@ -421,6 +421,153 @@ body {
 }
 
 
+/// Contact page
+.contact_page{
+
+
+	section{
+		width: auto;
+		height: auto;
+	}
+
+	.form_container{
+		color: #fff;
+		padding: 1% 3%;
+
+		.form_head{
+			width: 100%;
+
+			h2{
+				font-size: 8rem;
+				font-family: 'Qahiri', sans-serif;
+			}
+			p {
+				font-size: 3rem;
+				font-family: 'Roboto', sans-serif;
+				padding: 1%;
+				margin: 50px 0%;
+			}
+		}
+
+		.contact_form{
+			display: flex;
+			flex-direction: column;
+			text-transform: capitalize;
+			font-size: 2rem;
+			font-weight: 300;
+			padding: 5px 5%;
+
+			label {
+				margin-top: 20px;
+			}
+
+			.radio_btns{
+				display: flex;
+				flex-direction: column;
+				padding: 15px 10%;
+
+				p{
+					margin-left: -10%;
+					font-size: 3rem;
+				}
+			}
+
+			.concerns {
+				display: flex;
+				flex-direction: column;
+
+				.concerns_input {
+					width: 100%;
+					height: 100px;
+					display: flex;
+					justify-content: left;
+					align-items: flex-end;
+					margin: 15px;
+				}
+
+				@include bp-L {
+					width: 50%;
+				}
+			}
+
+			.newsletter{
+				font-size: 1rem;
+			}
+
+			.submit_btn{
+				margin-top: 50px;
+				text-transform: capitalize;
+				width: 25%;
+				align-self: center;
+				padding: 10px 0%;
+				background: #999;
+				color: #000;
+				font-weight: 500;
+				text-shadow: none;
+				border: none;
+			}
+
+			.submit_btn:hover {
+				background-image: 
+				radial-gradient( rgb(243, 77, 182), rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)),
+				url(/dist/img/plumbpng.png);
+				background-size: 400% 400%, 5%;
+				background-blend-mode:screen;
+				background-repeat: no-repeat, repeat;
+				animation: gradient 42s ease infinite;
+				border: .13em #999 solid;
+				color: #fff;
+				font-weight: 800;
+				text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+			}
+		}
+	}
+
+	.wrapper{
+		width:70%;
+	}
+
+	@media(max-width:992px){
+		.wrapper{
+			width:100%;
+		}
+	} 
+	.panel-heading {
+		padding: 0;
+		border:0;
+	}
+	.panel-title>a, .panel-title>a:active{
+		display:block;
+		padding:15px;
+		color:#555;
+		font-size:16px;
+		font-weight:bold;
+		text-transform:uppercase;
+		letter-spacing:1px;
+		word-spacing:3px;
+		text-decoration:none;
+	}
+	.panel-heading  a:before {
+		font-family: 'Glyphicons Halflings';
+		content: "\e114";
+		float: right;
+		transition: all 0.5s;
+	}
+	.panel-heading.active a:before {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		transform: rotate(180deg);
+	} 
+
+	.plumbus_footer{
+		padding: 5%;
+	}
+}
+
+
+
+
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
