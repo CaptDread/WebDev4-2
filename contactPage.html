@@ -32,21 +32,27 @@
                 <p>Wanna get involved, have issues you want dealt with, or do you simply wanna show your appreciation? Well here's your chance! Fill out this exotic form and we'll be sure to get back to you with haste.</p>
             </section>
             <form action="contact_us" class="contact_form">
-                <div class="radio_btns">
-                    <p>what is the reason for your message today?</p>
-                    <label for="radio_btn"  class="ideas">
-                        <input type="radio" name="radio_btn" id="idea_input">
-                        Penny for your thoughts
-                    </label>
-                    <label for="radio_btn" class="issues">
-                        <input type="radio" name="radio_btn" id="issues_input">
-                        I've got an issue or 2
-                    </label>
-                    <label for="radio_btn" class="compliments">
-                        <input type="radio" name="radio_btn" id="compliments_input">
-                        flattery will get you almost anywhere!
-                    </label>
-                </div>
+                <p>what is the reason for your message today?</p>
+                <ul class="radio_btns-container">
+                    <li><label for="radio_btn"  class="ideas">
+                        <input tabindex="0" type="radio" name="radio_btn" id="idea_input" aria-label="Get Involved option1">
+                        <p aria-hidden="true">
+                            Penny for your thoughts
+                        </p>
+                    </label></li>
+                    <li><label for="radio_btn" class="issues">
+                        <input tabindex="1" type="radio" name="radio_btn" id="issues_input" aria-label="Problem Option2">
+                        <p aria-hidden="true">
+                            I've got an issue or 2
+                        </p>
+                    </label></li>
+                    <li><label for="radio_btn" class="compliments">
+                        <input tabindex="2" type="radio" name="radio_btn" id="compliments_input" aria-label="Compliment option3">
+                        <p aria-hidden="true">
+                            flattery will get you almost anywhere!
+                        </p>
+                    </label></li>
+                </ul>
                 <label for="name" class="name">
                     name
                     <input type="text" name="name" id="name" class="name_input" autocomplete="on">

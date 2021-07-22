@@ -177,11 +177,6 @@ body {
 	flex-direction: column;
 	height: auto;
 }
-body section {
-	height: 66.66vh;
-	width: 100%;
-	z-index: 0;
-}
 @media screen and (min-width: 1020px) {
 	body section {
 		height: 80vh;
@@ -192,6 +187,9 @@ body section {
 }
 
 .plumbus_head {
+	height: 66.66vh;
+	width: 100%;
+	z-index: 0;
 	height: 10vh;
 	background-color: black;
 	position: -webkit-sticky;
@@ -243,6 +241,8 @@ body section {
 }
 
 .plumbus_hero-container {
+	width: 100%;
+	z-index: 0;
 	height: 185vh;
 	display: grid;
 	grid-template-rows: repeat(24, 1fr);
@@ -390,6 +390,9 @@ body section {
 }
 
 .plumbus_showcase {
+	height: 66.66vh;
+	width: 100%;
+	z-index: 0;
 	background-image: url(/dist/img/plumbusBkGD.jpg);
 	color: white;
 	font-size: 3.6rem;
@@ -424,6 +427,9 @@ body section {
 }
 
 .plumbus_styles {
+	height: 66.66vh;
+	width: 100%;
+	z-index: 0;
 	background-color: black;
 	color: white;
 	font-size: 1.5rem;
@@ -447,6 +453,9 @@ body section {
 }
 
 .plumbus_custom {
+	height: 66.66vh;
+	width: 100%;
+	z-index: 0;
 	background-image: linear-gradient(-45deg, rgba(255, 192, 203, 0.678), rgba(255, 255, 255, 0.438), rgba(250, 128, 114, 0.63)), url(/dist/img/plumbbkgd2.jpg);
 	background-size: cover;
 	background-position-x: 70%;
