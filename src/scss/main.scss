@@ -1,0 +1,435 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+
+
+// top right invert background
+
+
+
+
+@use 'reset';
+@import 'variables';
+@import 'mixins';
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(46, 48, 50);
+}
+
+/* 2. Content ================================= */
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+
+	section{
+		height: 66.66vh;
+		width: 100%;
+		z-index: 0;
+	}
+
+	@include bp-L {
+		section{
+			height: 80vh;
+			background-size: cover;
+			background-position-y: 50%;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+
+.plumbus_head {
+	height: 10vh;
+	background-color: black;
+	position: sticky;
+	top: 0%;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: space-between;
+	padding: 5% 5%;
+	font-family: 'Qahiri', sans-serif;
+	font-size: 1.5rem;
+	z-index: 2;
+
+	.plumbus_head-header {
+		position: relative;
+		color: white;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	nav {
+		position: relative;
+		width: 50%;
+		
+		ul{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
+			padding: 0% 5% 0% 0%;
+
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+
+	@include bp-M {
+		nav{
+			width: 30%;	
+			
+			a {
+				font-size: 1.7rem;
+			}
+		}
+
+		@include bp-L {
+			padding: 2% 5%;
+
+			a {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+.plumbus_hero-container {
+	height: 185vh;
+	display: grid;
+	grid-template-rows: repeat(24, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	color: white;
+	
+
+	.plumbus_hero-hero{
+		grid-area: 1 / 1 / 13 / 5;
+		background-color: #000;
+		background-size: 1505px;
+		background-repeat: no-repeat;
+		background-position-x: 50%;
+		background-position-y: bottom;
+		display: flex;
+		flex-direction: column;
+		text-transform: uppercase;
+		justify-content: flex-end;
+		padding-bottom: 100px;
+		color: white;
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		align-items: center;
+		overflow: hidden;
+
+		a {
+			width: 100%;
+			height: 100%;
+		}
+
+		.vid {
+			width: 120%;
+			height: 100%;
+		}
+
+		.plumbus_hero-head {
+			width: 100%;
+			display: flex;
+			padding: 0% 4% 0% 13%;
+			justify-content: space-between;
+		}
+	}
+	.plumbus_hero-cta1{
+		grid-area: 13 / 1 / 19 / 5;
+		width: 100%;
+		height: 100%;
+		background-image: 
+		radial-gradient( rgb(243, 77, 182), rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)),
+		url(/dist/img/plumbpng.png);
+		background-size: 400% 400%, 5%;
+		background-blend-mode:screen;
+		background-repeat: no-repeat, repeat;
+		display: flex;
+		flex-direction: column;
+		animation: gradient 42s ease infinite;
+		color: white;
+		text-decoration: none;
+		text-transform: capitalize;
+		justify-content: space-between;
+		font-size: 2rem;
+		padding: 7% 4%;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		font-family: 'Roboto', sans-serif;
+
+		h3 {
+			background-color: #000;
+			display: flex;
+			justify-content: center;
+			padding: 10px 0%;
+			transform: rotateZ(-7deg);
+		}
+		p {
+			background-color: #000;
+			display: flex;
+			justify-content: center;
+			padding: 10px 0%;
+			transform: rotateZ(7deg);
+		}
+	}
+	.plumbus_hero-cta2{
+		grid-area: 19 / 1 / 25 / 5;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		display: flex;
+		flex-direction: column;
+		color: white;
+		text-decoration: none;
+		text-transform: capitalize;
+		justify-content: space-between;
+		font-size: 2rem;
+		border: none;
+		padding: 7% 4%;
+		font-family: 'Roboto', sans-serif;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		font-weight: 700;
+
+		h3 {
+			background-image: 
+			radial-gradient( rgb(243, 77, 182), rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)),
+			url(/dist/img/plumbpng.png);
+			background-size: 400% 400%, 5%;
+			background-blend-mode:screen;
+			background-repeat: no-repeat, repeat;
+			animation: gradient 42s ease infinite;
+			display: flex;
+			justify-content: center;
+			padding: 10px 0%;
+			transform: rotateZ(-7deg);
+			z-index: 0;
+		}
+		p {
+			background-image: 
+			radial-gradient( rgb(243, 77, 182), rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)),
+			url(/dist/img/plumbpng.png);
+			background-size: 400% 400%, 5%;
+			background-blend-mode:screen;
+			background-repeat: no-repeat, repeat;
+			animation: gradient 42s ease infinite;
+			display: flex;
+			justify-content: center;
+			padding: 10px 5%;
+			transform: rotateZ(7deg);
+			z-index: 0;
+
+			span {
+				margin-left: 5%;
+				font-family: 'Qahiri', sans-serif;
+			}
+		}
+	}
+	.plumbing_hero-cta2:hover {
+		border: .13em pink solid;
+	}
+
+	@include bp-M{
+		height: 90vh;
+		grid-template-columns: repeat(12, 1fr);
+
+		.plumbus_hero-hero {
+			grid-area: 1 / 1 / 25 / 9;
+			background-size: cover;
+			background-position-x: 48%;
+		}
+		.plumbus_hero-cta1 {
+			grid-area: 1 / 9 / 13 / 13;
+		}
+		.plumbus_hero-cta2 {
+			grid-area: 13 / 9 / 25 / 13;
+		}
+
+		
+	}
+}
+
+.plumbus_showcase {
+	background-image: url(/dist/img/plumbusBkGD.jpg);
+	color: white;
+	font-size: 3.6rem;
+	padding: 5% 7%;
+	font-family: 'Qahiri', sans-serif;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+	.gallery_ul {
+		width: 60%;
+		height: 375px;
+		display: flex;
+		margin-top: 90px;
+		align-items: center;
+
+		img{
+			width: 300px;
+			border-radius: 5px;
+			border: .13em black solid;
+		}
+
+
+		
+	}
+
+	@include bp-M{
+		background-size: cover;
+		background-position-y: center;
+		background-repeat: no-repeat;
+
+		.gallery_ul{
+			width: 180px;
+
+			img {
+				width: 600px;
+			}
+		}
+	}
+}
+
+.plumbus_styles{
+	background-color: black;
+	color: white;
+	font-size: 1.5rem;
+	padding: 20px 7%;
+	font-family: 'Roboto', sans-serif;
+
+	h4{
+		text-transform: capitalize;
+		font-size: 3rem;
+		margin-bottom: 70px;
+		font-family: 'Qahiri', sans-serif;
+	}
+
+	@include bp-M {
+		font-size: 2rem;
+
+		h4 {
+			font-size: 4rem;
+			font-weight: 500;
+		}
+	}
+}
+
+.plumbus_custom{
+	background-image: linear-gradient(-45deg, rgba(255, 192, 203, 0.678), rgba(255, 255, 255, 0.438), rgba(250, 128, 114, 0.63)),
+	url(/dist/img/plumbbkgd2.jpg);
+	background-size: cover;
+	background-position-x: 70%;
+	color: white;
+	font-size: 4rem;
+	display: flex;
+	padding: 20px;
+	font-family: 'Qahiri', sans-serif;
+
+	h4{
+		width: 40%;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+}
+
+.plumbus_footer{
+	background-color: black;
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	padding: 5% 5% 10% 5%;
+
+	.footer_head {
+
+		.footer_head-header{
+			font-family: 'Qahiri', sans-serif;
+			color: #fff;
+			text-transform: capitalize;
+			margin-bottom: 15px;
+			font-size: 3rem;
+		}
+	}
+
+	.footer_nav {
+		width: 100%;
+
+		nav{
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			padding: 0% 5%;
+
+			ul{
+				margin-top: 15px;
+
+				li{
+					margin-top: 10px;
+	
+					a{
+						font-family: 'Roboto', sans-serif;
+						color: #fff;
+						text-decoration: none;
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+
+	@include bp-L {
+		flex-direction: row;
+
+		.footer_nav {
+
+			nav{
+
+				ul{
+					margin-top: auto;
+				}
+			}
+		}
+	}
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
