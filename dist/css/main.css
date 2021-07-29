@@ -200,7 +200,7 @@ body {
 	justify-content: space-between;
 	padding: 5% 5%;
 	font-family: "Qahiri", sans-serif;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	z-index: 2;
 }
 .plumbus_head .plumbus_head-header {
@@ -224,11 +224,14 @@ body {
 	text-decoration: none;
 }
 @media screen and (min-width: 760px) {
+	.plumbus_head {
+		font-size: 2rem;
+	}
 	.plumbus_head nav {
 		width: 30%;
 	}
 	.plumbus_head nav a {
-		font-size: 1.7rem;
+		font-size: 2rem;
 	}
 }
 @media screen and (min-width: 760px) and (min-width: 1020px) {
@@ -236,7 +239,7 @@ body {
 		padding: 2% 5%;
 	}
 	.plumbus_head a {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 }
 
@@ -250,9 +253,9 @@ body {
 	color: white;
 }
 .plumbus_hero-container .plumbus_hero-hero {
-	grid-area: 1/1/13/5;
+	grid-area: 1/1/10/5;
 	background-color: #000;
-	background-size: 1505px;
+	background-size: 1500px;
 	background-repeat: no-repeat;
 	background-position-x: 50%;
 	background-position-y: bottom;
@@ -260,7 +263,7 @@ body {
 	flex-direction: column;
 	text-transform: uppercase;
 	justify-content: flex-end;
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 	color: white;
 	font-family: "Roboto", sans-serif;
 	text-align: center;
@@ -282,7 +285,7 @@ body {
 	justify-content: space-between;
 }
 .plumbus_hero-container .plumbus_hero-cta1 {
-	grid-area: 13/1/19/5;
+	grid-area: 10/1/18/5;
 	width: 100%;
 	height: 100%;
 	background-image: radial-gradient(#f34db6, rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)), url(/dist/img/plumbpng.png);
@@ -302,24 +305,28 @@ body {
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	font-family: "Roboto", sans-serif;
 }
-.plumbus_hero-container .plumbus_hero-cta1 h3 {
+.plumbus_hero-container .plumbus_hero-cta1 .plumbus_cta1-a1 {
 	background-color: #000;
 	display: flex;
 	justify-content: center;
 	padding: 10px 0%;
 	-webkit-transform: rotateZ(-7deg);
 	        transform: rotateZ(-7deg);
+	color: #fff;
+	text-decoration: none;
 }
-.plumbus_hero-container .plumbus_hero-cta1 p {
+.plumbus_hero-container .plumbus_hero-cta1 .plumbus_cta1-a2 {
 	background-color: #000;
 	display: flex;
 	justify-content: center;
 	padding: 10px 0%;
 	-webkit-transform: rotateZ(7deg);
 	        transform: rotateZ(7deg);
+	color: #fff;
+	text-decoration: none;
 }
 .plumbus_hero-container .plumbus_hero-cta2 {
-	grid-area: 19/1/25/5;
+	grid-area: 18/1/25/5;
 	width: 100%;
 	height: 100%;
 	background-color: black;
@@ -336,7 +343,7 @@ body {
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	font-weight: 700;
 }
-.plumbus_hero-container .plumbus_hero-cta2 h3 {
+.plumbus_hero-container .plumbus_hero-cta2 .plumbus_cta2-a1 {
 	background-image: radial-gradient(#f34db6, rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)), url(/dist/img/plumbpng.png);
 	background-size: 400% 400%, 5%;
 	background-blend-mode: screen;
@@ -349,8 +356,10 @@ body {
 	-webkit-transform: rotateZ(-7deg);
 	        transform: rotateZ(-7deg);
 	z-index: 0;
+	color: #fff;
+	text-decoration: none;
 }
-.plumbus_hero-container .plumbus_hero-cta2 p {
+.plumbus_hero-container .plumbus_hero-cta2 .plumbus_cta2-a2 {
 	background-image: radial-gradient(#f34db6, rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)), url(/dist/img/plumbpng.png);
 	background-size: 400% 400%, 5%;
 	background-blend-mode: screen;
@@ -363,10 +372,14 @@ body {
 	-webkit-transform: rotateZ(7deg);
 	        transform: rotateZ(7deg);
 	z-index: 0;
+	color: #fff;
+	text-decoration: none;
 }
-.plumbus_hero-container .plumbus_hero-cta2 p span {
+.plumbus_hero-container .plumbus_hero-cta2 .plumbus_cta2-a2 span {
 	margin-left: 5%;
 	font-family: "Qahiri", sans-serif;
+	color: #fff;
+	text-decoration: none;
 }
 .plumbus_hero-container .plumbing_hero-cta2:hover {
 	border: 0.13em pink solid;
@@ -417,6 +430,7 @@ body {
 		background-size: cover;
 		background-position-y: center;
 		background-repeat: no-repeat;
+		height: 80vh;
 	}
 	.plumbus_showcase .gallery_ul {
 		width: 180px;
@@ -486,6 +500,21 @@ body {
 	text-transform: capitalize;
 	margin-bottom: 15px;
 	font-size: 3rem;
+	display: flex;
+	flex-direction: column;
+}
+.plumbus_footer .footer_head .footer_head-header input {
+	width: 50%;
+}
+.plumbus_footer .footer_head form {
+	display: flex;
+	flex-direction: column;
+}
+.plumbus_footer .footer_head form button {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	padding: 5px 1em;
 }
 .plumbus_footer .footer_nav {
 	width: 100%;
@@ -517,7 +546,7 @@ body {
 	}
 }
 
-.contact_page section {
+.contact_page .plumbus_head {
 	width: auto;
 	height: auto;
 }
@@ -546,7 +575,15 @@ body {
 	font-weight: 300;
 	padding: 5px 5%;
 }
+.contact_page .form_container .contact_form fieldset {
+	display: flex;
+	flex-direction: column;
+}
+.contact_page .form_container .contact_form legend {
+	font-family: "Roboto", sans-serif;
+}
 .contact_page .form_container .contact_form label {
+	font-family: "Roboto", sans-serif;
 	margin-top: 20px;
 }
 .contact_page .form_container .contact_form .radio_btns {
@@ -637,6 +674,145 @@ body {
 }
 .contact_page .plumbus_footer {
 	padding: 5%;
+}
+
+.reviews_main-cont img {
+	height: 50px;
+	border-radius: 50px;
+}
+.reviews_main-cont label {
+	cursor: pointer;
+	background: #555;
+}
+.reviews_main-cont #menu-toggle1 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu1 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle1:checked + #menu1 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle2 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu2 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle2:checked + #menu2 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle3 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu3 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle3:checked + #menu3 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle4 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu4 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle4:checked + #menu4 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle5 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu5 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle5:checked + #menu5 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle6 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu6 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle6:checked + #menu6 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle7 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu7 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle7:checked + #menu7 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle8 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu8 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle8:checked + #menu8 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle9 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu9 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle9:checked + #menu9 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle10 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu10 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle10:checked + #menu10 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle11 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu11 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle11:checked + #menu11 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle12 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu12 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle12:checked + #menu12 {
+	display: block;
+}
+.reviews_main-cont #menu-toggle13 {
+	display: none;
+	/* hide the checkbox */
+}
+.reviews_main-cont #menu13 {
+	display: none;
+}
+.reviews_main-cont #menu-toggle13:checked + #menu13 {
+	display: block;
 }
 
 @-webkit-keyframes gradient {

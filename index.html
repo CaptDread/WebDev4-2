@@ -17,19 +17,19 @@
 
 	<body>
 		
-		<div class="plumbus_head">
-			<h1 class="plumbus_head-header">The Plumbus</h1>
-			<nav>
+		<header class="plumbus_head" aria-label="The Plumbus Home Page">
+			<h1 class="plumbus_head-header" aria-hidden="true">The Plumbus</h1>
+			<nav >
 				<ul>
-					<li><a anchorText="Home Page link" href="" target="_blank" >home</a></li>
-					<li><a href="" anchorText="Product page Link" target="_blank" >products</a></li>
-					<li><a href="contactPage.html" anchorText="Contat Us here" target="_blank" >contact us</a></li>
+					<li><a id="anchor-home" href="index.html">home</a></li>
+					<li><a href="reviews.html">reviews</a></li>
+					<li><a href="contactPage.html">contact us</a></li>
 				</ul>
 			</nav>
-		</div>
+		</header>
 		<div class="plumbus_hero-container">
 			<div class="plumbus_hero-hero">
-				<a anchorText="Purchase a Plumbus" href="" class="purch_plumb">
+				<fig class="purch_plumb" aria-label="Plumbus X advert video">
 					<video class="vid" autoplay muted loop>
 						<source src="/src/img/PlumbusX.mp4" type="video/mp4">
 						<!-- <div class="plumbus_hero-head">
@@ -38,18 +38,24 @@
 						</div>
 						<a anchorText="Purchase a Plumbus" href="">purchase a plumbus</a> -->
 					</video>
-				</a>
+				</fig>
 			</div>
-			<a href="" anchorText="Where to buy" class="plumbus_hero-cta1">
-				<h3>Everyone has one in their home!?</h3>
-				<p>But where do they get them??</p>
-			</a>
-			<a href="" anchorText="New Plumbus Information" class="plumbus_hero-cta2">
-				<h3>The New Plumbus X</h3>
-				<p>form meeting function? <span>yeah, plumbus.</span></p>
-			</a>
+			<article class="plumbus_hero-cta1">
+				<a class="plumbus_cta1-a1" href="">Everyone has one in their home!?</a>
+				<a class="plumbus_cta1-a2" href="">But where do they get them??</a>
+			</article>
+			<article class="plumbus_hero-cta2">
+				<a class="plumbus_cta2-a1" href="">The New Plumbus X</a>
+				<a class="plumbus_cta2-a2" href="">form meeting function? <span>yeah, plumbus.</span></a>
+			</article>
 		</div>
-		<div class="plumbus_showcase" tabindex="0" aria-hidden="false">
+		<main class="plumbus_styles">
+			<article aria-label="Plumbus Styles">
+				<h4>No 2 plumbuses are alike.</h4>
+				<p>The beloved the beautiful, a beacon of immaculate design and pure unbridled perfection. The Plumbus X, a new era in professional and personal plumbus use. But here's the best part, the plumbus you have at your home right now is set to update, all, on, its, own. Boom, Plumbus X. Everyone has one, so shouldn't you. </p>
+			</article>
+		</main>
+		<aside class="plumbus_showcase">
 			<article aria-label="Plumbus Showcase">
 				<h4>Everyone's got one..?</h4>
 				<div class="showcase_container">
@@ -58,53 +64,46 @@
 					</ul>
 				</div>
 			</article>
-		</div>
-		<div class="plumbus_styles" tabindex="0" aria-hidden="false">
-			<article aria-label="Plumbus Styles">
-				<h4 aria-hidden="false">No 2 plumbuses are alike.</h4>
-				<p aria-hidden="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</article>
-		</div>
-		<div class="plumbus_custom" tabindex="0" aria-hidden="false">
+		</aside>
+		<a class="plumbus_custom" href="">
 			<h4>Commission a build Today!</h4>
-		</div>
+		</a>
 
 		<footer class="plumbus_footer">
-			<div class="footer_head">
-				<h6 class="footer_head-header">subscribe to the plumbus x newsletter!</h6>
+			<section class="footer_head">
 				<form action="subscribe">
-					<label for="email">
-						<input type="email" name="email" value="email@myemail.com" id="email_inp">
+					<label for="newsletter" class="footer_head-header">Subsrcibe to the Plubus X newsletter
+						<input type="email" name="email" id="newsletter" required>
 					</label>
-					<button type="submit">submit</button>
+					<button type="submit">sign up for newsletter</button>
 				</form>
 	
-			</div>
-			<div class="footer_nav">
+			</section>
+			<section class="footer_nav">
 				<nav>
 					<ul class="col1">
-						<li><a anchorText="Help Center Link" href="http://" target="_blank" anchorText="">help center</a></li>
-						<li><a anchorText="Warranty Link" href="http://" target="_blank" anchorText="">warranty</a></li>
+						<li><a href="http://" target="_blank" anchorText="">help center</a></li>
+						<li><a href="http://" target="_blank" anchorText="">warranty</a></li>
 						<li><a anchorText="Contact us Link" href="contactPage.html" target="_blank" anchorText="">contact us</a></li>
-						<li><a anchorText="Product Help Link" href="http://" target="_blank" anchorText="">product help</a></li>
-						<li><a anchorText="Order Status Link" href="http://" target="_blank" anchorText="">order status</a></li>
+						<li><a href="http://" target="_blank" anchorText="">product help</a></li>
+						<li><a href="http://" target="_blank" anchorText="">order status</a></li>
 					</ul>
 					<ul class="col2">
-						<li><a anchorText="Compare Link" href="http://" target="_blank" anchorText="">compare</a></li>
-						<li><a anchorText="Custom Products Link" href="http://" target="_blank" anchorText="">custom product</a></li>
-						<li><a anchorText="Bulk Orders Link" href="http://" target="_blank" anchorText="">bulk orders</a></li>
-						<li><a anchorText="Press Releases Link" href="http://" target="_blank" anchorText="">press releases</a></li>
-						<li><a anchorText="Discount Programs Link" href="http://" target="_blank" anchorText="">discount programs</a></li>
+						<li><a href="http://" target="_blank" anchorText="">compare</a></li>
+						<li><a href="http://" target="_blank" anchorText="">custom product</a></li>
+						<li><a href="http://" target="_blank" anchorText="">bulk orders</a></li>
+						<li><a href="http://" target="_blank" anchorText="">press releases</a></li>
+						<li><a href="http://" target="_blank" anchorText="">discount programs</a></li>
 					</ul>
 					<ul class="col3">
-						<li><a anchorText="About Link" href="http://" target="_blank" anchorText="">about</a></li>
-						<li><a anchorText="Green Energy Link" href="http://" target="_blank" anchorText="">green energy</a></li>
-						<li><a anchorText="Contact the Developer" href="http://" target="_blank" anchorText="">dreadev</a></li>
-						<li><a anchorText="Recycling Link" href="http://" target="_blank" anchorText="">recycling</a></li>
-						<li><a anchorText="Careers Link" href="http://" target="_blank" anchorText="">careers</a></li>
+						<li><a href="http://" target="_blank" anchorText="">about</a></li>
+						<li><a href="http://" target="_blank" anchorText="">green energy</a></li>
+						<li><a href="http://" target="_blank" anchorText="">dreaddev</a></li>
+						<li><a href="http://" target="_blank" anchorText="">recycling</a></li>
+						<li><a href="http://" target="_blank" anchorText="">careers</a></li>
 					</ul>
 				</nav>
-			</div>
+			</section>
 		</footer>
 
 		

@@ -75,7 +75,7 @@ body {
 	justify-content: space-between;
 	padding: 5% 5%;
 	font-family: 'Qahiri', sans-serif;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	z-index: 2;
 
 	.plumbus_head-header {
@@ -103,11 +103,12 @@ body {
 	}
 
 	@include bp-M {
+		font-size: 2rem;
 		nav{
 			width: 30%;	
 			
 			a {
-				font-size: 1.7rem;
+				font-size: 2rem;
 			}
 		}
 
@@ -115,7 +116,7 @@ body {
 			padding: 2% 5%;
 
 			a {
-				font-size: 2rem;
+				font-size: 3rem;
 			}
 		}
 	}
@@ -132,9 +133,9 @@ body {
 	
 
 	.plumbus_hero-hero{
-		grid-area: 1 / 1 / 13 / 5;
+		grid-area: 1 / 1 / 10 / 5;
 		background-color: #000;
-		background-size: 1505px;
+		background-size: 1500px;
 		background-repeat: no-repeat;
 		background-position-x: 50%;
 		background-position-y: bottom;
@@ -142,7 +143,7 @@ body {
 		flex-direction: column;
 		text-transform: uppercase;
 		justify-content: flex-end;
-		padding-bottom: 100px;
+		padding-bottom: 150px;
 		color: white;
 		font-family: 'Roboto', sans-serif;
 		text-align: center;
@@ -167,7 +168,7 @@ body {
 		}
 	}
 	.plumbus_hero-cta1{
-		grid-area: 13 / 1 / 19 / 5;
+		grid-area: 10 / 1 / 18 / 5;
 		width: 100%;
 		height: 100%;
 		background-image: 
@@ -188,23 +189,27 @@ body {
 		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 		font-family: 'Roboto', sans-serif;
 
-		h3 {
+		.plumbus_cta1-a1 {
 			background-color: #000;
 			display: flex;
 			justify-content: center;
 			padding: 10px 0%;
 			transform: rotateZ(-7deg);
+			color: #fff;
+			text-decoration: none;
 		}
-		p {
+		.plumbus_cta1-a2 {
 			background-color: #000;
 			display: flex;
 			justify-content: center;
 			padding: 10px 0%;
 			transform: rotateZ(7deg);
+			color: #fff;
+			text-decoration: none;
 		}
 	}
 	.plumbus_hero-cta2{
-		grid-area: 19 / 1 / 25 / 5;
+		grid-area: 18 / 1 / 25 / 5;
 		width: 100%;
 		height: 100%;
 		background-color: black;
@@ -221,7 +226,7 @@ body {
 		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 		font-weight: 700;
 
-		h3 {
+		.plumbus_cta2-a1 {
 			background-image: 
 			radial-gradient( rgb(243, 77, 182), rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)),
 			url(/dist/img/plumbpng.png);
@@ -234,8 +239,10 @@ body {
 			padding: 10px 0%;
 			transform: rotateZ(-7deg);
 			z-index: 0;
+			color: #fff;
+			text-decoration: none;
 		}
-		p {
+		.plumbus_cta2-a2 {
 			background-image: 
 			radial-gradient( rgb(243, 77, 182), rgba(231, 61, 183, 0.7), rgba(238, 118, 138, 0.8)),
 			url(/dist/img/plumbpng.png);
@@ -248,10 +255,14 @@ body {
 			padding: 10px 5%;
 			transform: rotateZ(7deg);
 			z-index: 0;
+			color: #fff;
+			text-decoration: none;
 
 			span {
 				margin-left: 5%;
 				font-family: 'Qahiri', sans-serif;
+				color: #fff;
+				text-decoration: none;
 			}
 		}
 	}
@@ -311,6 +322,7 @@ body {
 		background-size: cover;
 		background-position-y: center;
 		background-repeat: no-repeat;
+		height: 80vh;
 
 		.gallery_ul{
 			width: 180px;
@@ -385,6 +397,22 @@ body {
 			text-transform: capitalize;
 			margin-bottom: 15px;
 			font-size: 3rem;
+			display: flex;
+			flex-direction: column;
+
+			input {
+				width: 50%;
+			}
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+
+			button{
+				width: fit-content;
+				padding: 5px 1em;
+			}
 		}
 	}
 
@@ -434,7 +462,7 @@ body {
 .contact_page{
 
 
-	section{
+	.plumbus_head{
 		width: auto;
 		height: auto;
 	}
@@ -465,8 +493,18 @@ body {
 			font-size: 2rem;
 			font-weight: 300;
 			padding: 5px 5%;
+			
+			fieldset{
+				display: flex;
+				flex-direction: column;
+			}
+
+			legend{
+				font-family: 'Roboto', sans-serif;
+			}
 
 			label {
+				font-family: 'Roboto', sans-serif;
 				margin-top: 20px;
 			}
 
@@ -573,8 +611,135 @@ body {
 	}
 }
 
+.reviews_main-cont{
 
+	img{
+		height: 50px;
+		border-radius: 50px;
+	}
+	label {
+		cursor: pointer;
+		background: #555;
+	}
+	#menu-toggle1 {
+		display: none; /* hide the checkbox */
+	}
+	#menu1 {
+		display: none;
+	}
+	#menu-toggle1:checked + #menu1 {
+		display: block;
+	}
+	#menu-toggle2 {
+		display: none; /* hide the checkbox */
+	}
+	#menu2 {
+		display: none;
+	}
+	#menu-toggle2:checked + #menu2 {
+		display: block;
+	}
+	#menu-toggle3 {
+		display: none; /* hide the checkbox */
+	}
+	#menu3{
+		display: none;
+	}
+	#menu-toggle3:checked + #menu3 {
+		display: block;
+	}
+	#menu-toggle4 {
+		display: none; /* hide the checkbox */
+	}
+	#menu4 {
+		display: none;
+	}
+	#menu-toggle4:checked + #menu4 {
+		display: block;
+	}
+	#menu-toggle5 {
+		display: none; /* hide the checkbox */
+	}
+	#menu5 {
+		display: none;
+	}
+	#menu-toggle5:checked + #menu5 {
+		display: block;
+	}
+	#menu-toggle6 {
+		display: none; /* hide the checkbox */
+	}
+	#menu6 {
+		display: none;
+	}
+	#menu-toggle6:checked + #menu6 {
+		display: block;
+	}
+	#menu-toggle7 {
+		display: none; /* hide the checkbox */
+	}
+	#menu7 {
+		display: none;
+	}
+	#menu-toggle7:checked + #menu7 {
+		display: block;
+	}
+	#menu-toggle8 {
+		display: none; /* hide the checkbox */
+	}
+	#menu8 {
+		display: none;
+	}
+	#menu-toggle8:checked + #menu8 {
+		display: block;
+	}
+	#menu-toggle9 {
+		display: none; /* hide the checkbox */
+	}
+	#menu9 {
+		display: none;
+	}
+	#menu-toggle9:checked + #menu9 {
+		display: block;
+	}
+	#menu-toggle10 {
+		display: none; /* hide the checkbox */
+	}
+	#menu10 {
+		display: none;
+	}
+	#menu-toggle10:checked + #menu10 {
+		display: block;
+	}
+	#menu-toggle11 {
+		display: none; /* hide the checkbox */
+	}
+	#menu11 {
+		display: none;
+	}
+	#menu-toggle11:checked + #menu11 {
+		display: block;
+	}
+	#menu-toggle12 {
+		display: none; /* hide the checkbox */
+	}
+	#menu12 {
+		display: none;
+	}
+	#menu-toggle12:checked + #menu12 {
+		display: block;
+	}
+	#menu-toggle13 {
+		display: none; /* hide the checkbox */
+	}
+	#menu13 {
+		display: none;
+	}
+	#menu-toggle13:checked + #menu13 {
+		display: block;
+	}
 
+}
 
 
 @keyframes gradient {

@@ -14,45 +14,39 @@
 
 </head>
 <body class="contact_page">
-    <section class="plumbus_head">
-        <h1 class="plumbus_head-header">The Plumbus</h1>
+    <header class="plumbus_head" aria-hidden="true">
+        <h1 class="plumbus_head-header" aria-label="The Plumbus Contact Page">The Plumbus</h1>
         <nav>
             <ul>
-                <li><a anchorText="Home Page link" href="" target="_blank" >home</a></li>
-                <li><a href="" anchorText="Product page Link" target="_blank" >products</a></li>
-                <li><a href="" anchorText="Contat Us here" target="_blank" >contact us</a></li>
+                <li><a href="index.html">home</a></li>
+				<li><a href="reviews.html">reviews</a></li>
+				<li><a href="contactPage.html">contact us</a></li>
             </ul>
         </nav>
-    </section>
+    </header>
 
-    <div class="form_container">
+    <main class="form_container">
         <article class="form_body">
             <section class="form_head">
                 <h2>Contact us</h2>
                 <p>Wanna get involved, have issues you want dealt with, or do you simply wanna show your appreciation? Well here's your chance! Fill out this exotic form and we'll be sure to get back to you with haste.</p>
             </section>
             <form action="contact_us" class="contact_form">
-                <p>what is the reason for your message today?</p>
-                <ul class="radio_btns-container">
-                    <li><label for="radio_btn"  class="ideas">
+                <fieldset>
+                    <legend>what is the reason for your message today?</legend>
+                    <label for="radio_btn"  class="ideas">
                         <input tabindex="0" type="radio" name="radio_btn" id="idea_input" aria-label="Get Involved option1">
-                        <p aria-hidden="true">
-                            Penny for your thoughts
-                        </p>
-                    </label></li>
-                    <li><label for="radio_btn" class="issues">
+                        Penny for your thoughts
+                    </label>
+                    <label for="radio_btn" class="issues">
                         <input tabindex="1" type="radio" name="radio_btn" id="issues_input" aria-label="Problem Option2">
-                        <p aria-hidden="true">
-                            I've got an issue or 2
-                        </p>
-                    </label></li>
-                    <li><label for="radio_btn" class="compliments">
+                        I've got an issue or 2
+                    </label>
+                    <label for="radio_btn" class="compliments">
                         <input tabindex="2" type="radio" name="radio_btn" id="compliments_input" aria-label="Compliment option3">
-                        <p aria-hidden="true">
-                            flattery will get you almost anywhere!
-                        </p>
-                    </label></li>
-                </ul>
+                        wanna just tell us how well we are doing?
+                    </label>
+                </fieldset>
                 <label for="name" class="name">
                     name
                     <input type="text" name="name" id="name" class="name_input" autocomplete="on">
@@ -65,69 +59,46 @@
                     thoughts and concerns
                     <input type="text" name="concerns" id="concerns" class="concerns_input">
                 </label>
-
                 <label for="newsletter" class="newsletter">
                     <input type="checkbox" name="newsletter" id="nl_checkbox">
                     Would you like to recieve emails about new plumbus news and offers?
                 </label>
-                <button type="submit" class="submit_btn">submit</button>
+                <button type="submit" class="submit_btn">Submit Your message?</button>
             </form>
         </article>
-        
-            <div class="wrapper center-block">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading active" role="tab" id="headingOne">
-                            <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Collapsible Group Item #1
-                            </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer class="plumbus_footer">
         <div class="footer_head">
-            <h6 class="footer_head-header">subscribe to the plumbus x newsletter!</h6>
             <form action="subscribe">
-                <label for="email">
-                    <input type="email" name="email" value="email@myemail.com" id="email_inp">
+                <label for="newsletter" class="footer_head-header">Subsrcibe to the Plubus X newsletter
+                    <input type="email" name="email" id="newsletter" required>
                 </label>
-                <button type="submit">submit</button>
+                <button type="submit">sign up for newsletter</button>
             </form>
-
         </div>
         <div class="footer_nav">
             <nav>
                 <ul class="col1">
-                    <li><a href="http://" target="_blank" anchorText="">help center</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">warranty</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">contact us</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">product help</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">order status</a></li>
+                    <li><a href="http://" target="_blank" >help center</a></li>
+                    <li><a href="http://" target="_blank" >warranty</a></li>
+                    <li><a href="http://" target="_blank" >contact us</a></li>
+                    <li><a href="http://" target="_blank" >product help</a></li>
+                    <li><a href="http://" target="_blank" >order status</a></li>
                 </ul>
                 <ul class="col2">
-                    <li><a href="http://" target="_blank" anchorText="">compare</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">custom product</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">bulk orders</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">press releases</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">discount programs</a></li>
+                    <li><a href="http://" target="_blank" >compare</a></li>
+                    <li><a href="http://" target="_blank" >custom product</a></li>
+                    <li><a href="http://" target="_blank" >bulk orders</a></li>
+                    <li><a href="http://" target="_blank" >press releases</a></li>
+                    <li><a href="http://" target="_blank" >discount programs</a></li>
                 </ul>
                 <ul class="col3">
-                    <li><a href="http://" target="_blank" anchorText="">about</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">green energy</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">dreadev</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">recycling</a></li>
-                    <li><a href="http://" target="_blank" anchorText="">careers</a></li>
+                    <li><a href="http://" target="_blank" >about</a></li>
+                    <li><a href="http://" target="_blank" >green energy</a></li>
+                    <li><a href="http://" target="_blank" >dreadev</a></li>
+                    <li><a href="http://" target="_blank" >recycling</a></li>
+                    <li><a href="http://" target="_blank" >careers</a></li>
                 </ul>
             </nav>
         </div>
