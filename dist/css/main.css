@@ -177,15 +177,6 @@ body {
 	flex-direction: column;
 	height: auto;
 }
-@media screen and (min-width: 1020px) {
-	body section {
-		height: 80vh;
-		background-size: cover;
-		background-position-y: 50%;
-		background-repeat: no-repeat;
-	}
-}
-
 .plumbus_head {
 	height: 66.66vh;
 	width: 100%;
@@ -222,6 +213,7 @@ body {
 .plumbus_head nav ul a {
 	color: white;
 	text-decoration: none;
+	font-size: 1.6rem;
 }
 @media screen and (min-width: 760px) {
 	.plumbus_head {
@@ -230,7 +222,7 @@ body {
 	.plumbus_head nav {
 		width: 30%;
 	}
-	.plumbus_head nav a {
+	.plumbus_head nav ul a {
 		font-size: 2rem;
 	}
 }
@@ -238,7 +230,7 @@ body {
 	.plumbus_head {
 		padding: 2% 5%;
 	}
-	.plumbus_head a {
+	.plumbus_head nav ul a {
 		font-size: 3rem;
 	}
 }
@@ -329,7 +321,7 @@ body {
 	grid-area: 18/1/25/5;
 	width: 100%;
 	height: 100%;
-	background-color: black;
+	background-image: url(/dist/img/plumbus_x_t.webp);
 	display: flex;
 	flex-direction: column;
 	color: white;
@@ -474,7 +466,7 @@ body {
 	background-size: cover;
 	background-position-x: 70%;
 	color: white;
-	font-size: 4rem;
+	font-size: 6rem;
 	display: flex;
 	padding: 20px;
 	font-family: "Qahiri", sans-serif;
@@ -676,13 +668,37 @@ body {
 	padding: 5%;
 }
 
+.reviews_main-cont {
+	padding: 5px 5%;
+}
+.reviews_main-cont figure {
+	margin-right: 5%;
+}
 .reviews_main-cont img {
 	height: 50px;
-	border-radius: 50px;
+	width: 50px;
+	border-radius: 100%;
 }
 .reviews_main-cont label {
 	cursor: pointer;
 	background: #555;
+	color: #fff;
+	display: flex;
+	width: 60%;
+	margin: 10px 0%;
+	align-items: center;
+	text-transform: capitalize;
+}
+@media screen and (min-width: 760px) {
+	.reviews_main-cont label {
+		width: 35%;
+	}
+}
+.reviews_main-cont .review {
+	color: #fff;
+}
+.reviews_main-cont .reviewer {
+	color: #fff;
 }
 .reviews_main-cont #menu-toggle1 {
 	display: none;
